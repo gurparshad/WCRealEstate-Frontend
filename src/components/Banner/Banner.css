@@ -1,0 +1,12 @@
+.banner {
+  text-align: center;
+}
+
+.banner__img {
+  width: 100%;
+}
+
+.banner__text {
+  margin: 20px;
+  color: rgb(132, 132, 122);
+}
