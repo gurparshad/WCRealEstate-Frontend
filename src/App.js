@@ -10,6 +10,7 @@ import Banner from "./components/Banner/Banner";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import AddProperty from "./components/AddProperty/AddProperty";
+import AddPictures from "./components/AddPictures/AddPictures";
 
 export const authentication = {
   isLoggedIn: false,
@@ -56,6 +57,9 @@ function App() {
           </Route>
           <Route exact path="/addProperty">
             <AddProperty />
+          </Route>
+          <Route exact path="/addProperty/addPictures/:propertyId">
+            <AddPictures />
           </Route>
         </Switch>
 

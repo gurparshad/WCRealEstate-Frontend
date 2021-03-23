@@ -30,14 +30,20 @@ const AddProperty = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    const user = JSON.parse(localStorage.getItem("user"));
+    const userId = user.id;
+    console.log("----->> user id", userId);
 
     let isValid = false;
     isValid = validate(property);
     if (isValid) {
       const result = await axios.post(
-        "http://localhost:3001/api/1.0/property/addProperty/userId",
+        `http://localhost:3001/api/1.0/property/addProperty/${userId}`,
         property,
       );
+      const propertyId = result.data.id;
+      console.log("--------------+++++>>>>", propertyId);
+      history.push(`/addProperty/addPictures/${propertyId}`);
     }
   };
 
