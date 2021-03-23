@@ -1,0 +1,42 @@
+.addProperty {
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.addProperty__formGroup {
+  text-align: center;
+  margin: 30px;
+}
+
+h2 {
+  margin: 100px;
+}
+
+label {
+  width: 150px;
+  text-align: left;
+}
+
+.addProperty__submitButton {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(174, 167, 160);
+}
+
+.addProperty__error {
+  width: 350px;
+  color: red;
+  margin-top: 10px;
+  text-align: left;
+}

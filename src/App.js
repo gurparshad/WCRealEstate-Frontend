@@ -9,6 +9,7 @@ import MenuBar from "./components/MenuBar/MenuBar";
 import Banner from "./components/Banner/Banner";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
+import AddProperty from "./components/AddProperty/AddProperty";
 
 export const authentication = {
   isLoggedIn: false,
@@ -52,6 +53,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/addProperty">
+            <AddProperty />
           </Route>
         </Switch>
 

@@ -25,7 +25,7 @@ const Login = () => {
 
     if (isValid) {
       axios
-        .post("http://localhost:3002/api/1.0/users/login", user)
+        .post("http://localhost:3001/api/1.0/users/login", user)
         .then((data) => {
           localStorage.setItem("user", JSON.stringify(data.data.user));
           authentication.onAuthentication();
