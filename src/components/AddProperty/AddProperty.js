@@ -112,7 +112,9 @@ const AddProperty = () => {
       <div className="addProperty__formInner">
         <h2>Add Your Property details</h2>
         <div className="addProperty__formGroup">
-          <label htmlFor="address">Address:</label>
+          <label htmlFor="address" className="addProperty__label">
+            Address:
+          </label>
           <input
             type="text"
             name="address"
@@ -126,7 +128,9 @@ const AddProperty = () => {
           <p className="addProperty__error">{addressError}</p>
         </div>
         <div className="addProperty__formGroup">
-          <label htmlFor="price">Price(€):</label>
+          <label htmlFor="price" className="addProperty__label">
+            Price(€):
+          </label>
           <input
             type="text"
             name="price"
@@ -141,7 +145,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="rooms">Number of rooms:</label>
+          <label htmlFor="rooms" className="addProperty__label">
+            Number of rooms:
+          </label>
           <input
             type="text"
             name="rooms"
@@ -156,7 +162,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="builtYear">Built Year:</label>
+          <label htmlFor="builtYear" className="addProperty__label">
+            Built Year:
+          </label>
           <input
             type="text"
             name="builtYear"
@@ -171,7 +179,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="ownership">Ownership Type:</label>
+          <label htmlFor="ownership" className="addProperty__label">
+            Ownership Type:
+          </label>
           <input
             type="text"
             name="ownership"
@@ -186,7 +196,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="groundArea">Ground Area:</label>
+          <label htmlFor="groundArea" className="addProperty__label">
+            Ground Area:
+          </label>
           <input
             type="text"
             name="groundArea"
@@ -201,7 +213,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="energyMark">Energy Mark:</label>
+          <label htmlFor="energyMark" className="addProperty__label">
+            Energy Mark:
+          </label>
           <input
             type="text"
             name="energyMark"
@@ -216,7 +230,9 @@ const AddProperty = () => {
         </div>
 
         <div className="addProperty__formGroup">
-          <label htmlFor="phone">Phone:</label>
+          <label htmlFor="phone" className="addProperty__label">
+            Phone:
+          </label>
           <input
             type="text"
             name="phone"
@@ -234,7 +250,7 @@ const AddProperty = () => {
           <p className="addProperty__error">Unable to complete your request</p>
         )}
         <input
-          className="addProperty__submitButton btn btn-primary"
+          className="addProperty__submitButton"
           type="submit"
           value="Next"
           data-test="submitInput"

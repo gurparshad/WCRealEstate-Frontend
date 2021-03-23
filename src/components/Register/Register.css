@@ -1,0 +1,51 @@
+.register {
+  margin-top: 70px;
+  border: 1px solid rgb(209, 198, 198);
+  width: fit-content;
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.register__formGroup {
+  text-align: center;
+  margin-top: 50px;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 50px;
+}
+
+.register__label {
+  text-align: left;
+  width: 200px;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.register__submitButton {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: #f88c8c;
+  border: none;
+  font-weight: 600;
+  width: 300px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  outline: none;
+}
+
+.register__submitButton:hover {
+  background-color: #e95c5c;
+}
+
+.register__error {
+  width: 350px;
+  color: red;
+  margin-top: 10px;
+  text-align: left;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { NavLink } from "react-router-dom";
+import "./MenuBar.css";
 
 const MenuBar = () => {
   return (
@@ -14,12 +15,24 @@ const MenuBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <NavLink to="#home">Home</NavLink>
-          <NavLink to="#link">Buy</NavLink>
-          <NavLink to="/addProperty">Sell</NavLink>
-          <NavLink to="/login">Login</NavLink>
-          <NavLink to="/register">Register</NavLink>
-          <NavLink to="#link">Logout</NavLink>
+          <NavLink className="navLink" to="/">
+            Home
+          </NavLink>
+          <NavLink className="navLink" to="#link">
+            Buy
+          </NavLink>
+          <NavLink className="navLink" to="/addProperty">
+            Sell
+          </NavLink>
+          <NavLink className="navLink" to="/login">
+            Login
+          </NavLink>
+          <NavLink className="navLink" to="/register">
+            Register
+          </NavLink>
+          <NavLink className="navLink" to="#link">
+            Logout
+          </NavLink>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

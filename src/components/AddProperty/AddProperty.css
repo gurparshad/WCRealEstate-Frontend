@@ -9,22 +9,37 @@
 
 .addProperty__formGroup {
   text-align: center;
-  margin: 30px;
+  margin-top: 50px;
 }
 
 h2 {
   margin: 100px;
 }
 
-label {
-  width: 150px;
+.addProperty__label {
   text-align: left;
+  width: 200px;
+  font-size: larger;
+  font-weight: 600;
 }
 
 .addProperty__submitButton {
+  margin-top: 50px;
   margin-bottom: 20px;
-  border-radius: 10px;
-  width: 200px;
+  background-color: #f88c8c;
+  border: none;
+  font-weight: 600;
+  width: 300px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  outline: none;
+}
+
+.addProperty__submitButton:hover {
+  background-color: #e95c5c;
+}
+
+button:focus {
+  border: none;
 }
 
 input {
