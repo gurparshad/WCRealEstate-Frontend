@@ -22,6 +22,9 @@ const MenuBar = () => {
           <NavLink className="navLink" to="/addProperty">
             Sell
           </NavLink>
+          <NavLink className="navLink" to="/profile">
+            Profile
+          </NavLink>
           <NavLink className="navLink" to="/login">
             Login
           </NavLink>

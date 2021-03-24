@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import "./AddProperty.css";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
+import "./EditProperty.css";
 
-const AddProperty = () => {
+const EditProperty = () => {
   const history = useHistory();
+  const { propertyId } = useParams();
 
   const [property, setProperty] = useState({
     address: "",
@@ -36,14 +37,20 @@ const AddProperty = () => {
     let isValid = false;
     isValid = validate(property);
     if (isValid) {
-      const result = await axios.post(
-        `http://localhost:3001/api/1.0/property/addProperty/${userId}`,
+      const result = await axios.patch(
+        `http://localhost:3001/api/1.0/property/updateProperty/${propertyId}`,
         property,
       );
-      const propertyId = result.data.id;
-      console.log("--------------+++++>>>>", propertyId);
       history.push(`/addProperty/addPictures/${propertyId}`);
     }
+  };
+
+  const deleteProperty = async (e) => {
+    e.preventDefault();
+    await axios.delete(
+      `http://localhost:3001/api/1.0/property/delete/${propertyId}`,
+    );
+    history.push("/profile");
   };
 
   const validate = (property) => {
@@ -107,9 +114,32 @@ const AddProperty = () => {
     }
   };
 
+  const getPropertyDetails = async () => {
+    const result = await axios.get(
+      `http://localhost:3001/api/1.0/property/getProperty/${propertyId}`,
+    );
+    setProperty({
+      address: result.data.address,
+      price: result.data.price,
+      rooms: result.data.rooms,
+      builtYear: result.data.builtYear,
+      ownership: result.data.ownership,
+      groundArea: result.data.groundArea,
+      energyMark: result.data.energyMark,
+      phone: result.data.phone,
+    });
+  };
+
+  useEffect(() => {
+    getPropertyDetails();
+  }, []);
+
   return (
     <div>
-      <h3 className="addProperty__header">Add Your Property details</h3>
+      <h3 className="addProperty__header">Edit Your Property details</h3>
+      <button className="editProperty__deleteButton" onClick={deleteProperty}>
+        Delete
+      </button>
       <hr></hr>
       <form onSubmit={submitHandler} className="addProperty">
         <div className="addProperty__formInner">
@@ -265,4 +295,4 @@ const AddProperty = () => {
   );
 };
 
-export default AddProperty;
+export default EditProperty;

@@ -1,0 +1,18 @@
+.editProperty__deleteButton {
+  color: white;
+  margin-bottom: 20px;
+  background-color: rgb(46, 16, 16);
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  font-weight: 600;
+  width: 100px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  transition-delay: 30ms;
+  outline: none;
+}
+
+.editProperty__deleteButton:hover {
+  background-color: rgb(186, 15, 15);
+  color: rgb(211, 204, 204);
+}

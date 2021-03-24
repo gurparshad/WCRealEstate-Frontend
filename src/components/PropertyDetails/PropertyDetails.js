@@ -62,10 +62,13 @@ const PropertyDetails = () => {
             <p className="propertyDetails__dataItemSpan">Price:</p>
             <p>{details.price}</p>
           </div>
-          <div className="propertyDetails__dataItem">
-            <p className="propertyDetails__dataItemSpan">Rooms:</p>
-            <p>{details.rooms}</p>
-          </div>
+          {details.rooms ? (
+            <div className="propertyDetails__dataItem">
+              <p className="propertyDetails__dataItemSpan">Rooms:</p>
+              <p>{details.rooms}</p>
+            </div>
+          ) : null}
+
           <div className="propertyDetails__dataItem">
             <p className="propertyDetails__dataItemSpan">Built Year:</p>
             <p>{details.builtYear}</p>

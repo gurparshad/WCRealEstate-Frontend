@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import DisplayAddedPictures from "../DisplayAddedPIctures/DisplayAddedPictures";
+
 let imageFiles = [];
 
 const AddPictures = () => {
@@ -11,6 +12,7 @@ const AddPictures = () => {
   const [imageFile, setImageFile] = useState();
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const { propertyId } = useParams();
+
   const saveImage = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -27,11 +29,10 @@ const AddPictures = () => {
         },
       );
       const { url } = res.data;
+      console.log("url in add picture", url);
       imageFiles.push(url);
       setUploadedFiles(imageFiles);
       setImageFile(null);
-      console.log("--->>> uploaded files", uploadedFiles);
-      console.log(imageFiles);
     } catch (err) {
       if (err.response.status === 500) {
         console.log("there is problem with server", err);
@@ -39,6 +40,14 @@ const AddPictures = () => {
         console.log(err);
       }
     }
+  };
+
+  const finish = (e) => {
+    e.preventDefault();
+    setUploadedFiles([]);
+    setImageFile([]);
+    history.push("/profile");
+    imageFiles = [];
   };
 
   return (
@@ -56,7 +65,7 @@ const AddPictures = () => {
         <input type="submit" value="Add" className="btn btn-danger mt-4" />
       </form>
       {uploadedFiles ? <DisplayAddedPictures data={uploadedFiles} /> : null}
-      <button onClick={() => history.push("/dashboard")}>Finish</button>
+      <button onClick={finish}>Finish</button>
     </div>
   );
 };

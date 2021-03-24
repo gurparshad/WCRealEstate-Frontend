@@ -1,0 +1,5 @@
+.profile__properties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

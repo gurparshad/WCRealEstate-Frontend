@@ -3,7 +3,8 @@
   margin: 10px;
   border-radius: 10px;
   padding: 10px;
-  width: 400px;
+  width: 500px;
+  height: 500px;
   box-shadow: 5px 10px 15px rgb(211, 201, 201);
   text-align: center;
 }
@@ -11,5 +12,24 @@
 .property__img {
   object-fit: contain;
   width: 350px;
-  height: 350px;
+  height: 300px;
+}
+
+.property__detailsButton,
+.property__editButton {
+  margin-bottom: 20px;
+  background-color: #f88c8c;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  font-weight: 600;
+  width: 100px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  transition-delay: 30ms;
+  outline: none;
+}
+
+.property__detailsButton:hover,
+.property__editButton:hover {
+  background-color: #e95c5c;
 }

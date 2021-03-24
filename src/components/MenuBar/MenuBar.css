@@ -16,5 +16,6 @@
 }
 
 .navBrand:hover {
+  color: rgb(88, 71, 71);
   text-decoration: none;
 }
