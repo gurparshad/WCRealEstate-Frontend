@@ -108,155 +108,160 @@ const AddProperty = () => {
   };
 
   return (
-    <form onSubmit={submitHandler} className="addProperty">
-      <div className="addProperty__formInner">
-        <h2>Add Your Property details</h2>
-        <div className="addProperty__formGroup">
-          <label htmlFor="address" className="addProperty__label">
-            Address:
-          </label>
-          <input
-            type="text"
-            name="address"
-            id="address"
-            onChange={(e) =>
-              setProperty({ ...property, address: e.target.value })
-            }
-            value={property.address}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{addressError}</p>
-        </div>
-        <div className="addProperty__formGroup">
-          <label htmlFor="price" className="addProperty__label">
-            Price(€):
-          </label>
-          <input
-            type="text"
-            name="price"
-            id="price"
-            onChange={(e) =>
-              setProperty({ ...property, price: e.target.value })
-            }
-            value={property.price}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{priceError}</p>
-        </div>
+    <div>
+      <h3 className="addProperty__header">Add Your Property details</h3>
+      <hr></hr>
+      <form onSubmit={submitHandler} className="addProperty">
+        <div className="addProperty__formInner">
+          <div className="addProperty__formGroup">
+            <label htmlFor="address" className="addProperty__label">
+              Address:
+            </label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              onChange={(e) =>
+                setProperty({ ...property, address: e.target.value })
+              }
+              value={property.address}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{addressError}</p>
+          </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="price" className="addProperty__label">
+              Price(€):
+            </label>
+            <input
+              type="text"
+              name="price"
+              id="price"
+              onChange={(e) =>
+                setProperty({ ...property, price: e.target.value })
+              }
+              value={property.price}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{priceError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="rooms" className="addProperty__label">
-            Number of rooms:
-          </label>
-          <input
-            type="text"
-            name="rooms"
-            id="rooms"
-            onChange={(e) =>
-              setProperty({ ...property, rooms: e.target.value })
-            }
-            value={property.rooms}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{roomsError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="rooms" className="addProperty__label">
+              Number of rooms:
+            </label>
+            <input
+              type="text"
+              name="rooms"
+              id="rooms"
+              onChange={(e) =>
+                setProperty({ ...property, rooms: e.target.value })
+              }
+              value={property.rooms}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{roomsError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="builtYear" className="addProperty__label">
-            Built Year:
-          </label>
-          <input
-            type="text"
-            name="builtYear"
-            id="builtYear"
-            onChange={(e) =>
-              setProperty({ ...property, builtYear: e.target.value })
-            }
-            value={property.builtYear}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{builtYearError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="builtYear" className="addProperty__label">
+              Built Year:
+            </label>
+            <input
+              type="text"
+              name="builtYear"
+              id="builtYear"
+              onChange={(e) =>
+                setProperty({ ...property, builtYear: e.target.value })
+              }
+              value={property.builtYear}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{builtYearError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="ownership" className="addProperty__label">
-            Ownership Type:
-          </label>
-          <input
-            type="text"
-            name="ownership"
-            id="ownership"
-            onChange={(e) =>
-              setProperty({ ...property, ownership: e.target.value })
-            }
-            value={property.ownership}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{ownershipError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="ownership" className="addProperty__label">
+              Ownership Type:
+            </label>
+            <input
+              type="text"
+              name="ownership"
+              id="ownership"
+              onChange={(e) =>
+                setProperty({ ...property, ownership: e.target.value })
+              }
+              value={property.ownership}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{ownershipError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="groundArea" className="addProperty__label">
-            Ground Area:
-          </label>
-          <input
-            type="text"
-            name="groundArea"
-            id="groundArea"
-            onChange={(e) =>
-              setProperty({ ...property, groundArea: e.target.value })
-            }
-            value={property.groundArea}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{groundAreaError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="groundArea" className="addProperty__label">
+              Ground Area:
+            </label>
+            <input
+              type="text"
+              name="groundArea"
+              id="groundArea"
+              onChange={(e) =>
+                setProperty({ ...property, groundArea: e.target.value })
+              }
+              value={property.groundArea}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{groundAreaError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="energyMark" className="addProperty__label">
-            Energy Mark:
-          </label>
-          <input
-            type="text"
-            name="energyMark"
-            id="energyMark"
-            onChange={(e) =>
-              setProperty({ ...property, energyMark: e.target.value })
-            }
-            value={property.energyMark}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{energyMarkError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="energyMark" className="addProperty__label">
+              Energy Mark:
+            </label>
+            <input
+              type="text"
+              name="energyMark"
+              id="energyMark"
+              onChange={(e) =>
+                setProperty({ ...property, energyMark: e.target.value })
+              }
+              value={property.energyMark}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{energyMarkError}</p>
+          </div>
 
-        <div className="addProperty__formGroup">
-          <label htmlFor="phone" className="addProperty__label">
-            Phone:
-          </label>
-          <input
-            type="text"
-            name="phone"
-            id="phone"
-            onChange={(e) =>
-              setProperty({ ...property, phone: e.target.value })
-            }
-            value={property.phone}
-            autoComplete="true"
-          />
-          <p className="addProperty__error">{phoneError}</p>
-        </div>
+          <div className="addProperty__formGroup">
+            <label htmlFor="phone" className="addProperty__label">
+              Phone:
+            </label>
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              onChange={(e) =>
+                setProperty({ ...property, phone: e.target.value })
+              }
+              value={property.phone}
+              autoComplete="true"
+            />
+            <p className="addProperty__error">{phoneError}</p>
+          </div>
 
-        {addPropertyError && (
-          <p className="addProperty__error">Unable to complete your request</p>
-        )}
-        <input
-          className="addProperty__submitButton"
-          type="submit"
-          value="Next"
-          data-test="submitInput"
-        />
-      </div>
-    </form>
+          {addPropertyError && (
+            <p className="addProperty__error">
+              Unable to complete your request
+            </p>
+          )}
+          <input
+            className="addProperty__submitButton"
+            type="submit"
+            value="Next"
+            data-test="submitInput"
+          />
+        </div>
+      </form>
+    </div>
   );
 };
 

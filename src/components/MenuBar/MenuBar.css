@@ -8,3 +8,13 @@
   color: rgb(88, 71, 71);
   text-decoration: none;
 }
+
+.navBrand {
+  font-size: x-large;
+  color: black;
+  margin-right: 50px;
+}
+
+.navBrand:hover {
+  text-decoration: none;
+}

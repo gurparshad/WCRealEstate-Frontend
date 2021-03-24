@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(174, 167, 160);
+}
+
 h2 {
   margin-bottom: 50px;
 }

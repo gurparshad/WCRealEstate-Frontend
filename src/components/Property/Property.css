@@ -1,0 +1,15 @@
+.property {
+  border: 1px solid rgb(209, 198, 198);
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  width: 400px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  text-align: center;
+}
+
+.property__img {
+  object-fit: contain;
+  width: 350px;
+  height: 350px;
+}

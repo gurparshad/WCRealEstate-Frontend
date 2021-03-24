@@ -6,19 +6,17 @@ import "./MenuBar.css";
 
 const MenuBar = () => {
   return (
-    <Navbar
-      expand="lg"
-      style={{ backgroundColor: "#F88C8C" }}
-      className="justify-content-between"
-    >
-      <Navbar.Brand href="#home">WCRealEstate</Navbar.Brand>
+    <Navbar expand="lg" style={{ backgroundColor: "#F88C8C" }}>
+      <NavLink to="/" className="navBrand">
+        WCRealEstate
+      </NavLink>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavLink className="navLink" to="/">
             Home
           </NavLink>
-          <NavLink className="navLink" to="#link">
+          <NavLink className="navLink" to="/propertyList">
             Buy
           </NavLink>
           <NavLink className="navLink" to="/addProperty">

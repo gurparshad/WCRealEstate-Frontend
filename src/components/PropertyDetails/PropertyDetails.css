@@ -1,0 +1,46 @@
+.propertyDetails__header {
+  margin: 10px;
+  font-weight: 400;
+}
+
+.propertyDetails {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.propertyDetails__data {
+  width: 1000px;
+}
+
+.propertyDetails__carousel {
+  background-color: rgb(250, 239, 239);
+  border-radius: 10px;
+  margin: 30px;
+  height: 500px;
+}
+
+.propertyDetails__carouselImage {
+  width: 500px;
+  max-height: 450px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.propertyDetails__data {
+  width: 500px;
+}
+
+.propertyDetails__dataItem {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.propertyDetails__dataItemSpan {
+  font-weight: 500;
+  font-size: larger;
+  width: 200px;
+  margin-right: 20px;
+}

@@ -37,3 +37,10 @@
 .login__submitButton:hover {
   background-color: #e95c5c;
 }
+
+input {
+  width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(174, 167, 160);
+}

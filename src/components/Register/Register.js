@@ -118,7 +118,6 @@ const Register = () => {
             onChange={(e) => setUser({ ...user, firstName: e.target.value })}
             value={user.firstName}
             autoComplete="true"
-            data-test="firstNameInput"
           />
 
           <p className="register__error" data-test="firstNameValidationError">
@@ -136,7 +135,6 @@ const Register = () => {
             onChange={(e) => setUser({ ...user, lastName: e.target.value })}
             value={user.lastName}
             autoComplete="true"
-            data-test="lastNameInput"
           />
           <p className="register__error" data-test="lastNameValidationError">
             {lastNameError}
@@ -153,7 +151,6 @@ const Register = () => {
             onChange={(e) => setUser({ ...user, email: e.target.value })}
             value={user.email}
             autoComplete="true"
-            data-test="emailInput"
           />
           <p className="register__error" data-test="emailValidationError">
             {emailError}
@@ -170,7 +167,6 @@ const Register = () => {
             id="password"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
             value={user.password}
-            data-test="passwordInput"
           />
           <p className="register__error" data-test="passwordValidationError">
             {passwordError}
@@ -197,7 +193,6 @@ const Register = () => {
           className="register__submitButton"
           type="submit"
           value="Submit"
-          data-test="submitInput"
         />
         <div>
           <p className="register__loginParagraph">
