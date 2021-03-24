@@ -9,6 +9,7 @@
   box-shadow: 5px 10px 15px rgb(211, 201, 201);
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .login__label {

@@ -18,7 +18,12 @@ const PropertyList = ({ show }) => {
   }, []);
   return (
     <div className="propertyList">
-      {!show ? <h3>Availabe properties for sale</h3> : null}
+      {!show ? (
+        <div>
+          <h3 className="propertyList__header">Availabe properties for sale</h3>
+          <hr></hr>
+        </div>
+      ) : null}
 
       <div className="propertyList__properties">
         {properties.map((item) => (

@@ -3,3 +3,9 @@
   flex-flow: wrap;
   justify-content: center;
 }
+
+.propertyList__header {
+  margin: 10px;
+  font-weight: 400;
+  text-align: left;
+}

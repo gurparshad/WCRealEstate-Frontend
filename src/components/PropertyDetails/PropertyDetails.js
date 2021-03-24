@@ -83,7 +83,7 @@ const PropertyDetails = () => {
             <p>{details.energyMark}</p>
           </div>
           <div className="propertyDetails__dataItem">
-            <p className="propertyDetails__dataItemSpan">Phone:</p>
+            <p className="propertyDetails__dataItemSpan">Owner's Contact:</p>
             <p>{details.phone}</p>
           </div>
         </div>

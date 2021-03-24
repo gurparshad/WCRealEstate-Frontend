@@ -14,6 +14,7 @@ import AddPictures from "./components/AddPictures/AddPictures";
 import PropertyList from "./components/PropertyList/PropertyList";
 import PropertyDetails from "./components/PropertyDetails/PropertyDetails";
 import Home from "./components/Home/Home";
+import Footer from "./components/Footer/Footer";
 
 export const authentication = {
   isLoggedIn: false,
@@ -48,37 +49,41 @@ export const SecuredRoute = (props) => {
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <MenuBar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/register">
-            <Register />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route exact path="/addProperty">
-            <AddProperty />
-          </Route>
-          <Route exact path="/addProperty/addPictures/:propertyId">
-            <AddPictures />
-          </Route>
-          <Route exact path="/propertyList">
-            <PropertyList />
-          </Route>
-          <Route exact path="/propertyDetails/:propertyId">
-            <PropertyDetails />
-          </Route>
-        </Switch>
-
-        {/* <SecuredRoute path="/dashboard" component={Dashboard}></SecuredRoute> */}
-        {/* <SecuredRoute path="/community" component={Community}></SecuredRoute> */}
+    <div className="pageContainer">
+      <div className="wrapper">
+        <Router>
+          <div className="app">
+            <MenuBar />
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/register">
+                <Register />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/addProperty">
+                <AddProperty />
+              </Route>
+              <Route exact path="/addProperty/addPictures/:propertyId">
+                <AddPictures />
+              </Route>
+              <Route exact path="/propertyList">
+                <PropertyList />
+              </Route>
+              <Route exact path="/propertyDetails/:propertyId">
+                <PropertyDetails />
+              </Route>
+            </Switch>
+            {/* <SecuredRoute path="/dashboard" component={Dashboard}></SecuredRoute> */}
+            {/* <SecuredRoute path="/community" component={Community}></SecuredRoute> */}
+          </div>
+        </Router>
       </div>
-    </Router>
+      <Footer />
+    </div>
   );
 }
 
