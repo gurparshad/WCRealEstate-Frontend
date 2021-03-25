@@ -16,3 +16,9 @@
   background-color: rgb(186, 15, 15);
   color: rgb(211, 204, 204);
 }
+
+.editProperty__headerData {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}

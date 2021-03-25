@@ -74,15 +74,22 @@ function App() {
                 <PropertyDetails />
               </Route>
               <SecuredRoute
+                exact
                 path="/addProperty"
                 component={AddProperty}
               ></SecuredRoute>
               <SecuredRoute
+                exact
                 path="/addProperty/addPictures/:propertyId"
                 component={AddPictures}
               ></SecuredRoute>
-              <SecuredRoute path="/profile" component={Profile}></SecuredRoute>
               <SecuredRoute
+                exact
+                path="/profile"
+                component={Profile}
+              ></SecuredRoute>
+              <SecuredRoute
+                exact
                 path="/property/editProperty/:propertyId"
                 component={EditProperty}
               ></SecuredRoute>

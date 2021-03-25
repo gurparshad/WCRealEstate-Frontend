@@ -136,11 +136,15 @@ const EditProperty = () => {
 
   return (
     <div>
-      <h3 className="addProperty__header">Edit Your Property details</h3>
-      <button className="editProperty__deleteButton" onClick={deleteProperty}>
-        Delete
-      </button>
+      <div className="editProperty__headerData">
+        <h3 className="addProperty__header">Edit Your Property details</h3>
+
+        <button className="editProperty__deleteButton" onClick={deleteProperty}>
+          Delete Listing
+        </button>
+      </div>
       <hr></hr>
+
       <form onSubmit={submitHandler} className="addProperty">
         <div className="addProperty__formInner">
           <div className="addProperty__formGroup">

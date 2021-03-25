@@ -28,14 +28,30 @@ const Profile = () => {
 
   return (
     <div className="profile">
-      <p>{userData.userFirstName}</p>
-      <h4>Your Listings</h4>
+      <h3 className="profile__header">Profile</h3>
+      <hr></hr>
+      <div className="profile__dataItem">
+        <p className="profile__dataItemSpan">First Name:</p>
+        <p>{userData.userFirstName}</p>
+      </div>
+      <div className="profile__dataItem">
+        <p className="profile__dataItemSpan">Last Name:</p>
+        <p>{userData.userLastName}</p>
+      </div>
+      <div className="profile__dataItem">
+        <p className="profile__dataItemSpan">Email:</p>
+        <p>{userData.userEmail}</p>
+      </div>
+      <h5 className="profile__header">Your Listings</h5>
+      <hr></hr>
       <div className="profile__properties">
-        {userProperties.length > 0
-          ? userProperties.map((item, key) => (
-              <Property property={item} owner={true} />
-            ))
-          : null}
+        {userProperties.length > 0 ? (
+          userProperties.map((item, key) => (
+            <Property property={item} owner={true} />
+          ))
+        ) : (
+          <p>Your listings will appear here</p>
+        )}
       </div>
     </div>
   );

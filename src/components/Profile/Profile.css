@@ -3,3 +3,22 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.profile__header {
+  margin: 10px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.profile__dataItem {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+
+.profile__dataItemSpan {
+  font-weight: 500;
+  font-size: larger;
+  width: 200px;
+  margin-right: 20px;
+}
