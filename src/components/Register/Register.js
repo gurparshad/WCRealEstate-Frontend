@@ -37,7 +37,7 @@ const Register = () => {
           localStorage.setItem("user", JSON.stringify(data.data.user));
           authentication.onAuthentication();
           localStorage.setItem("user", JSON.stringify(data.data.user));
-          history.push("/dashboard");
+          history.push("/");
         })
         .catch((err) => {
           if (err.response.status === 400) {

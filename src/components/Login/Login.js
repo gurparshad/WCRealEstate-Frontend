@@ -29,8 +29,8 @@ const Login = () => {
         .then((data) => {
           localStorage.setItem("user", JSON.stringify(data.data.user));
           authentication.onAuthentication();
-          localStorage.setItem("user", JSON.stringify(data.data.user));
-          history.push("/dashboard");
+          // localStorage.setItem("user", JSON.stringify(data.data.user));
+          history.push("/");
         })
         .catch((err) => {
           if (err.response.status === 400) {

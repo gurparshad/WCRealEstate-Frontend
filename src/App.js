@@ -42,7 +42,7 @@ export const SecuredRoute = (props) => {
         authentication.getLogInStatus() ? (
           <props.component {...data}></props.component>
         ) : (
-          <Redirect to={{ pathname: "/" }}></Redirect>
+          <Redirect to={{ pathname: "/login" }}></Redirect>
         )
       }
     ></Route>
@@ -67,27 +67,26 @@ function App() {
               <Route exact path="/login">
                 <Login />
               </Route>
-              <Route exact path="/addProperty">
-                <AddProperty />
-              </Route>
-              <Route exact path="/addProperty/addPictures/:propertyId">
-                <AddPictures />
-              </Route>
               <Route exact path="/propertyList">
                 <PropertyList />
               </Route>
               <Route exact path="/propertyDetails/:propertyId">
                 <PropertyDetails />
               </Route>
-              <Route exact path="/profile">
-                <Profile />
-              </Route>
-              <Route exact path="/property/editProperty/:propertyId">
-                <EditProperty />
-              </Route>
+              <SecuredRoute
+                path="/addProperty"
+                component={AddProperty}
+              ></SecuredRoute>
+              <SecuredRoute
+                path="/addProperty/addPictures/:propertyId"
+                component={AddPictures}
+              ></SecuredRoute>
+              <SecuredRoute path="/profile" component={Profile}></SecuredRoute>
+              <SecuredRoute
+                path="/property/editProperty/:propertyId"
+                component={EditProperty}
+              ></SecuredRoute>
             </Switch>
-            {/* <SecuredRoute path="/dashboard" component={Dashboard}></SecuredRoute> */}
-            {/* <SecuredRoute path="/community" component={Community}></SecuredRoute> */}
           </div>
         </Router>
       </div>
