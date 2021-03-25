@@ -63,17 +63,17 @@ const AddProperty = () => {
       validationError = true;
     }
 
-    if (property.price === "") {
-      setPriceError("*Please Enter the price");
+    if (property.price === "" || !property.price.match(/^[0-9]+$/)) {
+      setPriceError("*Please Enter a valid price");
       validationError = true;
     }
 
-    if (property.rooms === "") {
-      setRoomsError("*Please Enter the number of rooms");
+    if (property.rooms === "" || !property.rooms.match(/^[0-9]+$/)) {
+      setRoomsError("*Please Enter a valid number of rooms");
       validationError = true;
     }
 
-    if (property.builtYear === "") {
+    if (property.builtYear === "" || !property.builtYear.match(/^[0-9]+$/)) {
       setBuiltYearError("*Please Enter the Built year of property");
       validationError = true;
     }
@@ -83,7 +83,7 @@ const AddProperty = () => {
       validationError = true;
     }
 
-    if (property.groundArea === "") {
+    if (property.groundArea === "" || !property.groundArea.match(/^[0-9]+$/)) {
       setGroundAreaError("*Please Enter the Ground area");
       validationError = true;
     }
@@ -93,7 +93,7 @@ const AddProperty = () => {
       validationError = true;
     }
 
-    if (property.energyMark === "") {
+    if (property.phone === "") {
       setPhoneError("*Please Enter the phone");
       validationError = true;
     }

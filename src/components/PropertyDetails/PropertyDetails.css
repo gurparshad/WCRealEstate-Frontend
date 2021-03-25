@@ -14,7 +14,6 @@
 }
 
 .propertyDetails__carousel {
-  background-color: rgb(250, 239, 239);
   border-radius: 10px;
   margin: 30px;
   height: 500px;
@@ -24,8 +23,6 @@
   width: 500px;
   max-height: 450px;
   object-fit: contain;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .propertyDetails__data {
