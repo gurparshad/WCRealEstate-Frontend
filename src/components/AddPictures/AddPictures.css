@@ -1,6 +1,65 @@
 .addPicture {
   margin: 20px;
-  width: 500px;
-  margin-left: auto;
+  justify-content: center;
+}
+.addPictures__header {
+  margin: 10px;
+  font-weight: 400;
+}
+
+.addPicture__submitButton {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background-color: #f88c8c;
+  border: none;
+  font-weight: 600;
+  width: 300px;
+  box-shadow: 5px 10px 15px rgb(211, 201, 201);
+  transition-delay: 30ms;
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.addPicture__submitButton:hover {
+  background-color: #e95c5c;
+}
+
+.addPicture__removeButton {
+  color: white;
+  margin-bottom: 20px;
+  background-color: rgb(46, 16, 16);
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: 600;
+}
+
+.addPicture__removeButton:hover {
+  background-color: rgb(186, 15, 15);
+  color: rgb(211, 204, 204);
+}
+
+.addPicture__propertyImages {
+  width: 250px;
+  height: 250px;
+}
+
+.addPicture__propertyAllImages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.addPicture__propertyDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.addPicture__finishDiv {
+  display: flex;
+  justify-content: center;
   margin-right: auto;
+  margin-left: auto;
 }

@@ -199,7 +199,7 @@ const AddProperty = () => {
 
           <div className="addProperty__formGroup">
             <label htmlFor="groundArea" className="addProperty__label">
-              Ground Area:
+              Ground Area(m²):
             </label>
             <input
               type="text"

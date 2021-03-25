@@ -5,18 +5,6 @@ import "./DisplayAddedPictures.css";
 const DisplayAddedPictures = ({ data }) => {
   const [images, setImages] = useState([]);
 
-  // const removeImage = async (item) => {
-  //   console.log(item);
-  //   console.log("guru----++++++", item);
-  //   await axios.delete(
-  //     `http://localhost:3001/api/1.0/property/deletePictureByUrl/${item}`,
-  //   );
-  //   console.log("after axios", images);
-  //   const filteredItems = images.filter((i) => i !== item);
-  //   console.log("after", filteredItems);
-  //   setImages(filteredItems);
-  // };
-
   useEffect(() => {
     setImages(data);
   }, [data]);
@@ -29,7 +17,6 @@ const DisplayAddedPictures = ({ data }) => {
             alt="propertyImage"
             style={{ height: "300px", width: "300px" }}
           />
-          {/* <button onClick={() => removeImage(item)}>Remove</button> */}
         </div>
       ))}
     </div>
