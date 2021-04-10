@@ -11,7 +11,7 @@ Note - run the commands without quotes
 
 ## Start Application
 
-run command "npm run start"
+run command "npm start"
 react application will start at localhost:3000
   
  ### Languages and libraries used in the project:
@@ -21,3 +21,4 @@ react application will start at localhost:3000
   - Javascript
   - React
   - Axios
+  - react-bootstrap
