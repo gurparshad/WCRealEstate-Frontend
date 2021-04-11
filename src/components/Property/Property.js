@@ -34,7 +34,7 @@ const Property = ({ property, owner }) => {
         alt="propertyImage"
         className="property__img"
       />
-      <p>Apartment for sale {property.rooms} Rooms</p>
+      <p>Property for sale {property.rooms} Rooms</p>
       <button
         onClick={() => history.push(`/propertyDetails/${property.id}`)}
         className="property__detailsButton"
